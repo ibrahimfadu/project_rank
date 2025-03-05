@@ -9,13 +9,13 @@
 <body>
   <div class="container">
     <header>
-      <h1>Engineering college prediction system</h1>
+      <h1>Engineering College Prediction System</h1>
     </header>
-    
+
     {% if error %}
       <div class="error">{{ error }}</div>
     {% endif %}
-    
+
     <section class="form-section">
       <form method="POST" action="/recommend">
         <div class="form-group">
@@ -39,7 +39,7 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="cutoff_type">Cutoff year:</label>
+          <label for="cutoff_type">Cutoff Year:</label>
           <select name="cutoff_type" id="cutoff_type">
             <option value="2024">2024 Cutoff</option>
             <option value="ai">AI Predicted 2025 Cutoff</option>
@@ -50,33 +50,35 @@
         </div>
       </form>
     </section>
-    
+
     {% if recommendations %}
-        <h3>Rank: {{rank}}</h3>
-        <h3>Branch: {{selected_branch}}</h3>
-        <h3>Category: {{selected_category}}</h3>
+      <h3>Rank: {{rank}}</h3>
+      <h3>Branch: {{selected_branch}}</h3>
+      <h3>Category: {{selected_category}}</h3>
       <section class="results-section">
-        <h2>Colleges available :</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>College</th>
-              <th>Branch</th>
-              <th>Cutoff</th>
-              <th>Chances in (%)</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for rec in recommendations %}
+        <h2>Colleges Available:</h2>
+        <div class="table-container">
+          <table>
+            <thead>
               <tr>
-                <td>{{ rec['College'] }}</td>
-                <td>{{ rec['Branch'] }}</td>
-                <td>{{ rec['Cutoff'] }}</td>
-                <td>{{ rec['Chance (%)'] }}</td>
+                <th>College</th>
+                <th>Branch</th>
+                <th>Cutoff</th>
+                <th>Chances (%)</th>
               </tr>
-            {% endfor %}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {% for rec in recommendations %}
+                <tr>
+                  <td>{{ rec['College'] }}</td>
+                  <td>{{ rec['Branch'] }}</td>
+                  <td>{{ rec['Cutoff'] }}</td>
+                  <td>{{ rec['Chance (%)'] }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
       </section>
     {% endif %}
   </div>
