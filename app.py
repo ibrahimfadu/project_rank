@@ -2,6 +2,7 @@ from flask import Flask, request, render_template
 import pandas as pd
 import math
 import numpy as np
+import os
 
 app = Flask(__name__)
 
@@ -129,5 +130,7 @@ def recommend_route():
                            cutoff_type=cutoff_type,
                            error=None)
 
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000)
+    app.run(host="0.0.0.0", port=port, debug=True)
