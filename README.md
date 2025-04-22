@@ -73,11 +73,24 @@ python app.py
 # 5. Visit in browser
 http://localhost:5000
 
-```bash
+```
 ## ✅ Testing Summary
 
-- MAE on test data: **812**
-- Prediction accuracy: **85–90%**
-- Response time: **1–3 seconds**
-- Desktop UI: ✅ Smooth and responsive
-- Mobile UI: ❌ Needs improvement
+- **MAE (Mean Absolute Error)** on test data: **812**  
+  _Calculated based on the model’s performance on test data._
+- **Prediction accuracy**: **85–90%**  
+  _This is the model's accuracy within real-world use cases._
+- **Response time**: **1–3 seconds**  
+  _The time it takes for the model to provide predictions._
+- **Desktop UI**: ✅ **Smooth and responsive**
+- **Mobile UI**: ❌ **Needs improvement**
+
+---
+
+## 🧪 Model Evaluation & Testing
+
+The performance of the model is evaluated using the following metrics:
+
+1. **Mean Absolute Error (MAE)**: This metric helps us understand the average difference between the predicted and actual values. A lower value indicates better model performance.
+2. **Prediction Accuracy**: Represents the percentage of correct predictions the model makes.
+3. **Response Time**: Time taken to generate a
