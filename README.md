@@ -73,40 +73,11 @@ python app.py
 # 5. Visit in browser
 http://localhost:5000
 
-🧪 Testing Summary
+```bash
+## ✅ Testing Summary
 
-Feature	Status
-Input validation	✅ Success
-Accurate prediction (85–90%)	✅ Success
-Fast response time (1–3 sec)	✅ Success
-Mobile compatibility	❌ Needs work
-Error handling	✅ Success
-🔮 Future Enhancements
-Mobile-friendly UI
-
-AI-based career path suggestions
-
-Chatbot for admission guidance
-
-Real-time application tracking
-
-Interactive college explorer
-
-Integration with scholarship databases
-
-👨‍🎓 Target Users
-DCET students & parents
-
-Coaching institutes
-
-Education counselors & researchers
-
-📜 License & Credits
-Built with ❤️ by Ibrahim Khaleel
-
-Open-source under MIT License
-
-Data sourced from official DCET records and educational platforms
-
-🌐 Live Demo
-👉 https://project-xhyg.onrender.com/recommend
+- MAE on test data: **812**
+- Prediction accuracy: **85–90%**
+- Response time: **1–3 seconds**
+- Desktop UI: ✅ Smooth and responsive
+- Mobile UI: ❌ Needs improvement
